@@ -1,5 +1,7 @@
 # Chuck Norris Frases famosas frontend API
 
+![Design preview for chuck project](dontHateChuck.png)
+
 Este es mi primer proyecto donde consumo una API para obtener frases famosas de Chuck Norris y mostrarlas en el frontend. He utilizado el siguiente framework y documentación:
 
 - [NES.css](https://nostalgic-css.github.io/NES.css/): Un framework CSS con estilo retro que proporciona una apariencia de videojuego de los años 80.
