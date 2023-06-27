@@ -1,15 +1,12 @@
 const display = document.getElementById("show");
 const next = document.getElementById("next");
 
-let url = 'https://api.chucknorris.io/jokes/random';
-
-
 function showDisplay(text){
     console.log(text);
     display.textContent = text;
 }
 
-next.onclick = function(){
+/*next.onclick = function(){
     fetch('https://api.chucknorris.io/jokes/random')
     .then(response => {
       if (response.ok) {
@@ -25,4 +22,13 @@ next.onclick = function(){
     .catch(error => {
       console.error(error);
     });
+};*/
+
+next.onclick = async function(){
+    try{   
+        const res = await fetch('https://api.chucknorris.io/jokes/random')
+        showDisplay(await res.json().value);
+    }catch(error){
+        console.error(error);
+    }
 };
