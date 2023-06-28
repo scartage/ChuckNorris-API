@@ -2,7 +2,6 @@ const display = document.getElementById("show");
 const next = document.getElementById("next");
 
 function showDisplay(text){
-    console.log(text);
     display.textContent = text;
 }
 
@@ -27,7 +26,8 @@ function showDisplay(text){
 next.onclick = async function(){
     try{   
         const res = await fetch('https://api.chucknorris.io/jokes/random')
-        showDisplay(await res.json().value);
+        const data = await res.json();
+        showDisplay(await data.value);
     }catch(error){
         console.error(error);
     }
